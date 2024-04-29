@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+body {
+    display: flex;
+    height: 100dvh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: var(--yellow);
+}
+
+article {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    height: auto;
+    min-width: auto;
+    border-radius: 16px;
+    border: 1px solid var(--black);
+    padding: 20px;
+    box-shadow: .3em .4em var(--black);
+    transition: .2s ease;
+    max-width: 384px;
+}
+
+@media only screen and (max-width: 400px) {
+    article {
+        max-width: 90%;
+    }
+    header h1{
+        font-size: 20px;
+    }
+}
+
+article:hover {
+    box-shadow: .8em .8em var(--black);
+    transition: .2s ease;
+}
+
+article .main-image {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+article aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+aside .tag{
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    font-weight: 800;
+    background-color: var(--yellow);
+    width: fit-content;
+}
+
+aside .date {
+    font-size: 15px;
+    margin-top: 12px;
+    font-weight: 400;
+}
+
+header h1 {
+    width: fit-content;
+    margin: 0;
+    border-radius: 4px;
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+header h1:hover {
+    color: var(--yellow);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+article p {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+}
+
+.author {
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author img {
+    height: auto;
+    object-fit: contain;
+    height: 32px;
+    width: 32px;
+}
+
+.author h2 {
+    font-size: 15px;
+    margin-left: 12px;
+}
+
+header p{
+    color: var(--grey);
+    margin-top: 12px;
+    line-height: 24px;
+    font-weight: 400;
+}
